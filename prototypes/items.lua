@@ -15,4 +15,4 @@ locomotive.icon = MOD_NAME.."/graphics/locomotive/red/icon.png"
 locomotive.place_result = "hs-locomotive"
 table.insert(t_items,locomotive)
 
-data:extend(color_items)
+data:extend(t_items)

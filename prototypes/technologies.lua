@@ -23,6 +23,6 @@ train.order = "c-g-ac"
 train.effects = {
   { type="unlock-recipe", recipe="hs-locomotive" }
 }
-table.insert(color_technologies, train)
+table.insert(t_technologies, train)
 
 data:extend(t_technologies)
