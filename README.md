@@ -1,5 +1,7 @@
 # More Locomotives
 
+![banner](http://i.imgur.com/otSDNBu.png)
+
 A factorio mod which adds several (by now: one) more locomotive.
 
 Forum: https://forums.factorio.com/viewtopic.php?f=93&t=21001
@@ -18,6 +20,12 @@ A cheaper, more efficient but slower diesel locomotive.
 
 _Why should I want a slower locomotive?_ Well, it's actually not that slow. Its probably not the best choice for transporting tons of ores over long distances, but its ideal for small transport within your factory. Also, you will survive being hit by it!
 
+## What's next?
+
+* A faster but far more fuel consuming high-speed locomotive.
+* The cargo locomotive should not be impacted much by a high load.
+* Speed upgrade for the cargo locomotive while keeping its efficiency.
+* Electro locomotives!
 
 ## Credits
 
