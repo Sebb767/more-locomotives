@@ -2,7 +2,7 @@
 
 ![banner](http://i.imgur.com/QlaZvZP.png)
 
-A factorio mod which adds several (by now: one) more locomotive.
+A factorio mod which adds several more locomotives.
 
 Forum: https://forums.factorio.com/viewtopic.php?f=93&t=21001
 
@@ -31,8 +31,8 @@ _Why should I want a faster locomotive?_ Let's be serious for a second.
 
 ## What's next?
 
-~* A faster but far more fuel consuming high-speed locomotive.~ Done!
-~* The cargo locomotive should not be impacted much by a high load.~ Done!
+<strike>* A faster but far more fuel consuming high-speed locomotive.</strike> Done!
+<strike>* The cargo locomotive should not be impacted much by a high load.</strike> Done!
 * Automatically dual-headed cargo locomotive.
 * Speed upgrade for the cargo locomotive while keeping its efficiency.
 * Electro locomotives!
