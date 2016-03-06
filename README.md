@@ -6,7 +6,7 @@ Forum: _tbd_
 
 Screenshots: http://imgur.com/a/rrgEo
 
-## new Locomotives 
+## new locomotives 
 
 ### cargo locomotive
 
