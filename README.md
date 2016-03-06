@@ -1,5 +1,22 @@
-# more-locomotives
-A factorio mod which adds several (by now: one) more locomotive. A description is yet to come.
+# More Locomotives
+
+A factorio mod which adds several (by now: one) more locomotive.
+
+Forum: _tbd_
+
+Screenshots: http://imgur.com/a/rrgEo
+
+## new Locomotives 
+
+### cargo locomotive
+
+A cheaper, more efficient but slower diesel locomotive. 
+- Is slower (max speed is about 64 km/h) and better brakes.
+- Has a bigger light cone and will activate it earlier.
+- More fuel efficient (about 60%) than the stock locomotive.
+- Cheaper to build: Only needs 12 engine units, 16 gears, 20 iron & 4 steel plates.
+
+_Why should I want a slower locomotive?_ Well, it's actually not that slow. Its probably not the best choice for transporting tons of ores over long distances, but its ideal for small transport within your factory. Also, you will survive being hit by it!
 
 
 ## Credits
