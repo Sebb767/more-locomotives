@@ -31,8 +31,8 @@ _Why should I want a faster locomotive?_ Let's be serious for a second.
 
 ## What's next?
 
-<strike>* A faster but far more fuel consuming high-speed locomotive.</strike> Done!
-<strike>* The cargo locomotive should not be impacted much by a high load.</strike> Done!
+* <strike>A faster but far more fuel consuming high-speed locomotive.</strike> Done!
+* <strike>The cargo locomotive should not be impacted much by a high load.</strike> Done!
 * Automatically dual-headed cargo locomotive.
 * Speed upgrade for the cargo locomotive while keeping its efficiency.
 * Electro locomotives!
