@@ -1,48 +1,5 @@
 require("prototypes.config")
 
-color_entities = {}
-
-if ENABLE_TRAINS then
-    -- reskin stock train to use 'unmarked' sprites
-    stock_train = data.raw["locomotive"]["diesel-locomotive"]
-    stock_train.icon                  = MOD_NAME.."/graphics/locomotive/stock/icon.png"
-    stock_train.pictures.filenames[1] = MOD_NAME.."/graphics/locomotive/stock/01.png"
-    stock_train.pictures.filenames[2] = MOD_NAME.."/graphics/locomotive/stock/02.png"
-    stock_train.pictures.filenames[3] = MOD_NAME.."/graphics/locomotive/stock/03.png"
-    stock_train.pictures.filenames[4] = MOD_NAME.."/graphics/locomotive/stock/04.png"
-    stock_train.pictures.filenames[5] = MOD_NAME.."/graphics/locomotive/stock/05.png"
-    stock_train.pictures.filenames[6] = MOD_NAME.."/graphics/locomotive/stock/06.png"
-    stock_train.pictures.filenames[7] = MOD_NAME.."/graphics/locomotive/stock/07.png"
-    stock_train.pictures.filenames[8] = MOD_NAME.."/graphics/locomotive/stock/08.png"
-
-    -- create new colored train entities
-    for color,rgb in pairs(COLOR_TABLE) do
-        train = util.table.deepcopy(data.raw["locomotive"]["diesel-locomotive"])
-        train.type                  = "locomotive"
-        train.name                  = "diesel-locomotive-"..color
-        train.icon                  = MOD_NAME.."/graphics/locomotive/"..color.."/icon.png"
-        train.pictures.filenames[1] = MOD_NAME.."/graphics/locomotive/"..color.."/01.png"
-        train.pictures.filenames[2] = MOD_NAME.."/graphics/locomotive/"..color.."/02.png"
-        train.pictures.filenames[3] = MOD_NAME.."/graphics/locomotive/"..color.."/03.png"
-        train.pictures.filenames[4] = MOD_NAME.."/graphics/locomotive/"..color.."/04.png"
-        train.pictures.filenames[5] = MOD_NAME.."/graphics/locomotive/"..color.."/05.png"
-        train.pictures.filenames[6] = MOD_NAME.."/graphics/locomotive/"..color.."/06.png"
-        train.pictures.filenames[7] = MOD_NAME.."/graphics/locomotive/"..color.."/07.png"
-        train.pictures.filenames[8] = MOD_NAME.."/graphics/locomotive/"..color.."/08.png"
-        if UNCRAFT_ITEMS_ON_PICKUP then
-            train.minable["result"] = "diesel-locomotive"
-        else
-            train.minable["result"] = "diesel-locomotive-"..color
-        end
-
-        table.insert(color_entities,train)
-    end
-end
-
-
-
---data:extend(color_entities)
-
 new_trains = {}
 
 -- Cargo Locomotive
@@ -62,40 +19,53 @@ cargo_loc.pictures.filenames[8] = MOD_NAME.."/graphics/locomotive/orange/08.png"
 cargo_loc.max_speed = 0.3
 cargo_loc.max_power = "400kW"
 cargo_loc.braking_force = 20
-cargo_loc.front_light =
-      {
-        {
-          type = "oriented",
-          minimum_darkness = 0.2,
-          picture =
-          {
+front_light_file = {
             filename = "__core__/graphics/light-cone.png",
             priority = "medium",
             scale = 3,
             width = 250,
             height = 250
-          },
-          shift = {-0.6, -16},
+          }
+cargo_loc.front_light =
+      {
+        {
+          type = "oriented",
+          minimum_darkness = 0.2,
+          picture = front_light_file,
+          shift = {0.6, -20},
           size = 2,
           intensity = 0.6
         },
         {
           type = "oriented",
           minimum_darkness = 0.2,
-          picture =
-          {
-            filename = "__core__/graphics/light-cone.png",
-            priority = "medium",
-            scale = 3,
-            width = 250,
-            height = 250
-          },
-          shift = {-0.6, -16},
+          picture = front_light_file,
+          shift = {-0.6, -20},
           size = 2,
           intensity = 0.6
         }
       }
-
+cargo_loc.energy_source =
+    {
+      type = "burner",
+      effectivity = 1.6,
+      fuel_inventory_size = 3,
+      smoke =
+      {
+        {
+          name = "train-smoke",
+          deviation = {0.3, 0.3},
+          frequency = 80,
+          position = {0, 0},
+          starting_frame = 0,
+          starting_frame_deviation = 60,
+          height = 2,
+          height_deviation = 0.5,
+          starting_vertical_speed = 0.2,
+          starting_vertical_speed_deviation = 0.1,
+        }
+      }
+    }
 
 
 table.insert(new_trains, cargo_loc)

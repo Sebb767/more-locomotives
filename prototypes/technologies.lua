@@ -20,26 +20,12 @@ if ENABLE_CONCRETE then
     table.insert(color_technologies, concrete)
 end
 
-if ENABLE_LAMPS then
--- colored indicator lamps tech
-    lamp = util.table.deepcopy(data.raw["technology"]["optics"])
-    lamp.name = "colored-lamps"
-    lamp.icon = MOD_NAME.."/graphics/lamp/cyan/icon.png"
-    lamp.prerequisites = {"optics", "circuit-network"}
-    lamp.unit = {count=20, ingredients={{"science-pack-1",1},{"science-pack-2",1}}, time=15}
-    lamp.order = "a-h-ac"
-    lamp.effects = {}
-    for color,rgb in pairs(COLOR_TABLE) do
-        table.insert(lamp.effects, { type="unlock-recipe", recipe="small-lamp-"..color })
-    end
-    table.insert(color_technologies, lamp)
-end
 
 train = util.table.deepcopy(data.raw["technology"]["railway"])
 train.name = "cargo-locomotive"
 train.icon = MOD_NAME.."/graphics/locomotive/orange/icon.png"
 train.prerequisites = {"railway"}
-train.unit = {count=70, ingredients={{"science-pack-1",1},{"science-pack-2",1}}, time=20}
+train.unit = {count=25, ingredients={{"science-pack-1",1},{"science-pack-2",1}}, time=20}
 train.order = "c-g-ac"
 train.effects = {
   { type="unlock-recipe", recipe="cargo-locomotive" }

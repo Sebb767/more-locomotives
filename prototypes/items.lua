@@ -47,7 +47,6 @@ locomotive = util.table.deepcopy(data.raw["item"]["diesel-locomotive"])
 locomotive.name = "cargo-locomotive"
 locomotive.icon = MOD_NAME.."/graphics/locomotive/orange/icon.png"
 locomotive.place_result = "cargo-locomotive"
---locomotive.subgroup = "color-trains"
 table.insert(color_items,locomotive)
 
 data:extend(color_items)

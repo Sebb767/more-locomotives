@@ -23,9 +23,10 @@ data:extend({
     name = "cargo-locomotive",
     energy_required = 5,
     ingredients = {
-      {"diesel-locomotive", 1},
-      {"iron-gear-wheel",40},
-      {"iron-plate",20}
+      {"engine-unit", 12},
+      {"iron-gear-wheel", 16},
+      {"iron-plate", 20},
+      {"steel-plate", 4}
     },
     result = "cargo-locomotive"
   }
