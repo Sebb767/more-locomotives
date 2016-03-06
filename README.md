@@ -8,6 +8,8 @@ Forum: https://forums.factorio.com/viewtopic.php?f=93&t=21001
 
 Screenshots: http://imgur.com/a/rrgEo
 
+Download: https://github.com/Sebb767/more-locomotives/releases
+
 ## new locomotives 
 
 ### cargo locomotive
