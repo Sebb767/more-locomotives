@@ -3,7 +3,7 @@
   "version": "0.1",
   "title": "more locomotives",
   "author": "Sebb767",
-  "homepage": "",
+  "homepage": "https://github.com/Sebb767/more-locomotives",
   "dependencies": ["base >= 0.12"],
   "description": "Adds some more locomotives. Everybody loves trains!"
 }
