@@ -1,6 +1,6 @@
 # More Locomotives
 
-![banner](http://i.imgur.com/otSDNBu.png)
+![banner](http://i.imgur.com/QlaZvZP.png)
 
 A factorio mod which adds several (by now: one) more locomotive.
 
