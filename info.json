@@ -1,0 +1,9 @@
+{
+  "name": "more-locomotives",
+  "version": "0.1",
+  "title": "more locomotives",
+  "author": "Sebb767",
+  "homepage": "",
+  "dependencies": ["base >= 0.12"],
+  "description": "Adds some more locomotives. Everybody loves trains!"
+}
