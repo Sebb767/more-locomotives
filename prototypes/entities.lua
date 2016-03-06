@@ -70,8 +70,51 @@ cargo_loc.energy_source =
       }
     }
 
-
 table.insert(new_trains, cargo_loc)
+
+-- high-speed locomotive
+hs_loc = util.table.deepcopy(data.raw["locomotive"]["diesel-locomotive"])
+hs_loc.name = "hs-locomotive"
+hs_loc.minable["result"] = hs_loc.name
+base_path = "/graphics/locomotive/red"
+hs_loc.icon                  = MOD_NAME..base_path.."/icon.png"
+hs_loc.pictures.filenames[1] = MOD_NAME..base_path.."/01.png"
+hs_loc.pictures.filenames[2] = MOD_NAME..base_path.."/02.png"
+hs_loc.pictures.filenames[3] = MOD_NAME..base_path.."/03.png"
+hs_loc.pictures.filenames[4] = MOD_NAME..base_path.."/04.png"
+hs_loc.pictures.filenames[5] = MOD_NAME..base_path.."/05.png"
+hs_loc.pictures.filenames[6] = MOD_NAME..base_path.."/06.png"
+hs_loc.pictures.filenames[7] = MOD_NAME..base_path.."/07.png"
+hs_loc.pictures.filenames[8] = MOD_NAME..base_path.."/08.png"
+hs_loc.braking_force = 15
+
+hs_loc.max_speed = 1.6
+hs_loc.max_power = "1200kW"
+hs_loc.energy_source =
+    {
+      type = "burner",
+      effectivity = 0.5,
+      fuel_inventory_size = 5,
+      smoke =
+      {
+        {
+          name = "train-smoke",
+          deviation = {0.3, 0.3},
+          frequency = 320,
+          position = {0, 0},
+          starting_frame = 0,
+          starting_frame_deviation = 60,
+          height = 2,
+          height_deviation = 0.5,
+          starting_vertical_speed = 0.2,
+          starting_vertical_speed_deviation = 0.1,
+        }
+      }
+    }
+
+
+
+table.insert(new_trains, hs_loc)
 data:extend(new_trains)
 
 farl =  {
@@ -90,7 +133,7 @@ farl =  {
       weight = 2000,
       max_speed = 0.8,
       max_power = "600kW",
-      braking_force = 10,
+      braking_force = 30,
       friction_force = 0.0015,
       -- this is a percentage of current speed that will be subtracted
       air_resistance = 0.002,
@@ -135,7 +178,7 @@ farl =  {
           {
             name = "smoke",
             deviation = {0.1, 0.1},
-            frequency = 210,
+            frequency = 320,
             position = {0, 0},
             slow_down_factor = 3,
             starting_frame = 1,
