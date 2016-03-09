@@ -29,6 +29,6 @@ data:extend({
       {"iron-plate", 40 },
       {"steel-plate", 75 }
     },
-    result = "cargo-locomotive"
+    result = "hs-locomotive"
   }
 })
