@@ -88,12 +88,12 @@ hs_loc.pictures.filenames[7] = MOD_NAME..base_path.."/07.png"
 hs_loc.pictures.filenames[8] = MOD_NAME..base_path.."/08.png"
 hs_loc.braking_force = 15
 
-hs_loc.max_speed = 1.6
-hs_loc.max_power = "1200kW"
+hs_loc.max_speed = 2
+hs_loc.max_power = "400kW"
 hs_loc.energy_source =
     {
       type = "burner",
-      effectivity = 0.5,
+      effectivity = 0.4,
       fuel_inventory_size = 5,
       smoke =
       {
