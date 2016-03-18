@@ -19,9 +19,12 @@ cargo_loc.pictures.filenames[8] = MOD_NAME..base_path.."/08.png"
 cargo_loc.air_resistance = 0.0005
 cargo_loc.max_health = 2500
 
-cargo_loc.max_speed = 0.3
+cargo_loc.max_speed = 0.4
 cargo_loc.max_power = "400kW"
-cargo_loc.braking_force = 20
+if CARGOLOC_SLOW_ACCELERATION then
+  cargo_loc.max_powers = "250kW"
+end
+cargo_loc.braking_force = 24
 front_light_file = {
             filename = "__core__/graphics/light-cone.png",
             priority = "medium",
@@ -88,7 +91,7 @@ hs_loc.pictures.filenames[7] = MOD_NAME..base_path.."/07.png"
 hs_loc.pictures.filenames[8] = MOD_NAME..base_path.."/08.png"
 hs_loc.braking_force = 15
 
-hs_loc.max_speed = 2
+hs_loc.max_speed = 2.0
 hs_loc.max_power = "400kW"
 hs_loc.energy_source =
     {
