@@ -4,5 +4,11 @@ MOD_NAME = "__more-locomotives__"
 -- transport or stop-and-go, but on the other hand, slowly accelerating locomotives are awesome!
 CARGOLOC_SLOW_ACCELERATION = false
 
---  Leftover from color coding. I'm not sure if its still used anywhere, so I'll keep it for reference.
-COLOR_TABLE = {}
+-- electro locomotive's max energy. This is limited by its max_power and should probably not be modified
+MAX_ELOC_ENERGY = 20000
+
+-- wether electro locomotives require nearby poles to function
+ELOC_REQUIRE_POLES = true
+
+-- max. distance to an eletric pole
+ELOC_MAX_POLE_DISTANCE = 14
