@@ -118,4 +118,36 @@ hs_loc.energy_source =
 
 
 table.insert(new_trains, hs_loc)
+
+-- electro locomotive
+eloc = util.table.deepcopy(data.raw["locomotive"]["diesel-locomotive"])
+eloc.name = "electro-locomotive"
+eloc.minable["result"] = hs_loc.name
+base_path = "/graphics/locomotive/blue"
+eloc.icon                  = MOD_NAME..base_path.."/icon.png"
+eloc.pictures.filenames[1] = MOD_NAME..base_path.."/01.png"
+eloc.pictures.filenames[2] = MOD_NAME..base_path.."/02.png"
+eloc.pictures.filenames[3] = MOD_NAME..base_path.."/03.png"
+eloc.pictures.filenames[4] = MOD_NAME..base_path.."/04.png"
+eloc.pictures.filenames[5] = MOD_NAME..base_path.."/05.png"
+eloc.pictures.filenames[6] = MOD_NAME..base_path.."/06.png"
+eloc.pictures.filenames[7] = MOD_NAME..base_path.."/07.png"
+eloc.pictures.filenames[8] = MOD_NAME..base_path.."/08.png"
+eloc.braking_force = 25
+
+eloc.max_speed = 2.0
+eloc.max_power = "600kW"
+cargo_loc.air_resistance = 0.05
+eloc.energy_source =
+    {
+      type = "burner",
+      effectivity = 0.001,
+      fuel_inventory_size = 0,
+      smoke = {}
+    }
+
+
+
+table.insert(new_trains, hs_loc)
+
 data:extend(new_trains)
