@@ -136,8 +136,8 @@ eloc.pictures.filenames[8] = MOD_NAME..base_path.."/08.png"
 eloc.braking_force = 25
 
 eloc.max_speed = 2.0
-eloc.max_power = "600kW"
-cargo_loc.air_resistance = 0.05
+eloc.max_power = "1200kW"
+eloc.air_resistance = 0.005
 eloc.energy_source =
     {
       type = "burner",
@@ -148,6 +148,6 @@ eloc.energy_source =
 
 
 
-table.insert(new_trains, hs_loc)
+table.insert(new_trains, eloc)
 
 data:extend(new_trains)
